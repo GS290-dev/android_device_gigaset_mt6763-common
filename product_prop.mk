@@ -24,10 +24,6 @@ endif
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.telephony.default_network=10,10
 
-# LCD Density
-PRODUCT_PRODUCT_PROPERTIES += \
-    ro.sf.lcd_density=420
-
 # Disable ccodec
 PRODUCT_PRODUCT_PROPERTIES += \
     debug.stagefright.ccodec=0
