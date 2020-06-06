@@ -16,20 +16,21 @@
 import common
 
 def FullOTA_InstallEnd(info):
-  OTA_InstallEnd(info)
+  OTA_InstallEnd(info, False)
 
 def IncrementalOTA_InstallEnd(info):
-  OTA_InstallEnd(info)
+  OTA_InstallEnd(info, True)
 
-def AddImage(info, basename, dest):
-  path = "IMAGES/" + basename
-  if path not in info.input_zip.namelist():
-    return
+def AddImage(info, basename, dest, incremental):
+  name = basename
+  if incremental:
+    input_zip = info.source_zip
+  else:
+    input_zip = info.input_zip
+  data = input_zip.read("IMAGES/" + basename)
+  common.ZipWriteStr(info.output_zip, name, data)
+  info.script.AppendExtra('package_extract_file("%s", "%s");' % (name, dest))
 
-  data = info.input_zip.read(path)
-  common.ZipWriteStr(info.output_zip, basename, data)
-  info.script.AppendExtra('package_extract_file("%s", "%s");' % (basename, dest))
-
-def OTA_InstallEnd(info):
+def OTA_InstallEnd(info, incremental):
   info.script.Print("Patching device-tree image...")
-  AddImage(info, "dtbo.img", "/dev/block/by-name/dtbo")
+  AddImage(info, "dtbo.img", "/dev/block/by-name/dtbo", incremental)
