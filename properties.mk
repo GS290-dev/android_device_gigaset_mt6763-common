@@ -222,6 +222,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.wfd.iframesize.level=0 \
     ro.vendor.mtk_wfd_support=1
 
+# Zygote preforking
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.device_config.runtime_native.usap_pool_enabled=true
+
 # MTK services log level
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.log.tag.AT=$(VENDOR_LOG_LEVEL) \
