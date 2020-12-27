@@ -1,0 +1,2 @@
+add_lunch_combo omni_GS290-userdebug
+add_lunch_combo omni_GS290-eng
