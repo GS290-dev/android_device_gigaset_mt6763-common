@@ -10,5 +10,5 @@
 /persist_image  emmc    /dev/block/platform/bootdevice/by-name/persist           flags=display="Persist (Image)";backup=1;flashimg=1
 /dtbo           emmc    /dev/block/platform/bootdevice/by-name/dtbo              flags=display="dtbo";backup=1;flashimg=1
 
-/external_sd    auto    /dev/block/mmcblk1p1            /dev/block/mmcblk1       flags=display="External SDcard";storage;wipeingui;removable;backup=0;adopted_mount_delay=5
-/usbotg         auto    /dev/block/sda1                 /dev/block/sda           flags=display="Usb-Otg";storage;removable;backup=0
+/external_sd    auto    /dev/block/mmcblk1p1            /dev/block/mmcblk1       flags=display="External SD";storage;wipeingui;removable;backup=0;adopted_mount_delay=5
+/usbotg         auto    /dev/block/sda1                 /dev/block/sda           flags=display="USB-OTG";storage;removable;backup=0
