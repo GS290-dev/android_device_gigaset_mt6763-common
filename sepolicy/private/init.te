@@ -1,0 +1,5 @@
+# Allow init to mount vendor overlays
+allow init vendor_overlay_file:dir mounton;
+
+# Allow init to mount kernel modules
+allow init vendor_file:dir mounton;

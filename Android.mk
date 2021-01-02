@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2018-2019 The LineageOS Project
+# Copyright (C) 2017 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -14,10 +14,9 @@
 # limitations under the License.
 #
 
-PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_GS290.mk
+LOCAL_PATH := $(call my-dir)
 
-COMMON_LUNCH_CHOICES := \
-    lineage_GS290-user \
-    lineage_GS290-userdebug \
-    lineage_GS290-eng
+ifneq ($(filter GS290,$(TARGET_DEVICE)),)
+  subdir_makefiles=$(call first-makefiles-under,$(LOCAL_PATH))
+  $(foreach mk,$(subdir_makefiles),$(info including $(mk) ...)$(eval include $(mk)))
+endif
