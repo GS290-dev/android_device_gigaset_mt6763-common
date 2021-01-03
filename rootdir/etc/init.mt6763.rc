@@ -11,3 +11,11 @@ service aee_aedv /system/bin/true
 service aee_aedv64 /system/bin/true
     oneshot
     disabled
+
+on charger
+    start charger
+
+service charger /system/bin/charger
+    class charger
+    group system wakelock
+    capabilities BLOCK_SUSPEND SYS_ADMIN SYS_BOOT
