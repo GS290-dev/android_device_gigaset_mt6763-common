@@ -32,6 +32,11 @@ DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
     $(LOCAL_PATH)/overlay-lineage
 
+PRODUCT_ENFORCE_RRO_TARGETS := *
+PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += \
+    $(LOCAL_PATH)/overlay-lineage/lineage-sdk \
+    $(LOCAL_PATH)/overlay-lineage/packages/apps/Dialer
+
 PRODUCT_PACKAGES += \
     NoCutoutOverlay
 
