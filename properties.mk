@@ -21,11 +21,11 @@ VENDOR_LOG_LEVEL=S
 endif
 
 # Telephony
-PRODUCT_PRODUCT_PROPERTIES += \
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.telephony.default_network=10,10
 
 # Disable ccodec
-PRODUCT_PRODUCT_PROPERTIES += \
+PRODUCT_PROPERTY_OVERRIDES += \
     debug.stagefright.ccodec=0
 
 # SurfaceFlinger
@@ -35,7 +35,7 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     ro.surface_flinger.vsync_event_phase_offset_ns=2000000 \
     ro.surface_flinger.vsync_sf_event_phase_offset_ns=6000000
 
-PRODUCT_PRODUCT_PROPERTIES += \
+PRODUCT_PROPERTY_OVERRIDES += \
     debug.sf.latch_unsignaled=1 \
     debug.sf.enable_gl_backpressure=1 \
     debug.sf.early_phase_offset_ns=500000 \
@@ -44,7 +44,7 @@ PRODUCT_PRODUCT_PROPERTIES += \
     debug.sf.early_gl_app_phase_offset_ns=15000000
 
 # MTK services log level
-PRODUCT_PRODUCT_PROPERTIES += \
+PRODUCT_PROPERTY_OVERRIDES += \
     persist.log.tag.AT=$(VENDOR_LOG_LEVEL) \
     persist.log.tag.AdnRecord=$(VENDOR_LOG_LEVEL) \
     persist.log.tag.AdnRecordCache=$(VENDOR_LOG_LEVEL) \

@@ -23,7 +23,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 $(call inherit-product, frameworks/native/build/phone-xhdpi-4096-dalvik-heap.mk)
 
 # Properties
--include $(LOCAL_PATH)/product_prop.mk
+-include $(LOCAL_PATH)/properties.mk
 
 # Screen density
 PRODUCT_AAPT_CONFIG := normal
