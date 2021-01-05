@@ -20,13 +20,168 @@ else
 VENDOR_LOG_LEVEL=S
 endif
 
-# Telephony
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-    ro.telephony.default_network=10,10
+# Audio
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.vendor.mtk_audio_alac_support=1 \
+    ro.vendor.mtk_audio_ape_support=1 \
+    ro.vendor.mtk_audio_tuning_tool_ver=V2.2 \
+    ro.vendor.mtk_besloudness_support=1 \
+    ro.vendor.mtk_aal_support=1
 
-# Disable ccodec
+# Bluetooth
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.vendor.mtk.bt_sap_enable=true
+
+# Camera
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.vendor.camera3.pipeline.bufnum.min.high_ram.imgo=8 \
+    persist.vendor.camera3.pipeline.bufnum.min.low_ram.imgo=6 \
+    persist.vendor.camera3.pipeline.bufnum.base.imgo=5 \
+    persist.vendor.camera3.pipeline.bufnum.min.high_ram.rrzo=8 \
+    persist.vendor.camera3.pipeline.bufnum.min.low_ram.rrzo=6 \
+    persist.vendor.camera3.pipeline.bufnum.base.rrzo=5 \
+    persist.vendor.camera3.pipeline.bufnum.min.high_ram.lcso=8 \
+    persist.vendor.camera3.pipeline.bufnum.min.low_ram.lcso=6 \
+    persist.vendor.camera3.pipeline.bufnum.base.lcso=5 \
+    persist.vendor.camera3.pipeline.bufnum.min.high_ram.rsso=8 \
+    persist.vendor.camera3.pipeline.bufnum.min.low_ram.rsso=6 \
+    persist.vendor.camera3.pipeline.bufnum.base.rsso=5 \
+    persist.vendor.camera3.pipeline.bufnum.min.high_ram.fdyuv=8 \
+    persist.vendor.camera3.pipeline.bufnum.min.low_ram.fdyuv=6 \
+    vendor.camera.mdp.dre.enable=0 \
+    vendor.camera.mdp.cz.enable=1 \
+    ro.vendor.mtk_zsdhdr_support=1 \
+    ro.vendor.mtk_slow_motion_support=1 \
+    ro.vendor.mtk_camera_app_version=3
+
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+    camera.disable_zsl_mode=1
+
+# Ccodec
 PRODUCT_PROPERTY_OVERRIDES += \
     debug.stagefright.ccodec=0
+
+# Connsys
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.vendor.connsys.chipid=-1 \
+    persist.vendor.connsys.patch.version=-1 \
+    persist.vendor.connsys.dynamic.dump=0 \
+    vendor.connsys.driver.ready=no \
+    persist.vendor.connsys.fm_chipid=mt6627
+
+# Crypto
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.crypto.volume.filenames_mode=aes-256-cts
+
+# Display
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.opengles.version=196610 \
+    ro.hardware.egl=mali \
+    ro.vendor.mtk_pq_support=2 \
+    ro.vendor.mtk_pq_color_mode=1 \
+    ro.vendor.mtk_blulight_def_support=1 \
+    debug.sf.disable_backpressure=1
+
+# DRM
+PRODUCT_PROPERTY_OVERRIDES += \
+    drm.service.enabled=true \
+    ro.vendor.mtk_widevine_drm_l3_support=1
+
+# FRP
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.frp.pst=/dev/block/platform/bootdevice/by-name/frp
+
+# GPS
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.vendor.mtk_agps_app=1 \
+    ro.vendor.mtk_gps_support=1
+
+# IMS
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.vendor.ims_support=1 \
+    persist.vendor.mtk_dynamic_ims_switch=1 \
+    persist.vendor.mims_support=2 \
+    persist.vendor.mtk_wfc_support=1 \
+    persist.vendor.volte_support=1 \
+    persist.vendor.mtk.volte.enable=1 \
+    persist.vendor.vilte_support=1 \
+    persist.vendor.viwifi_support=1 \
+    ro.vendor.md_auto_setup_ims=1 \
+    persist.vendor.mtk_ct_volte_support=1
+
+# Keymaster
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.vendor.mtk_microtrust_tee_support=1 \
+    ro.vendor.mtk_emmc_support=1
+
+# LMK
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.lmk.downgrade_pressure=60 \
+    persist.vendor.duraspeed.support=1 \
+    persist.vendor.duraspeed.app.on=1 \
+    persist.vendor.heavy.loading.support=1 \
+
+# Media
+PRODUCT_PROPERTY_OVERRIDES += \
+    vendor.mtk.vdec.waitkeyframeforplay=9 \
+    ro.vendor.have_aeev_feature=1
+
+# NFC
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.vendor.st_nfc_ignore_addon_support=1 \
+    ro.vendor.mtk_nfc_addon_support=1 \
+    ro.vendor.mtk_uicc_clf=1
+
+# OEM Unlock
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+    ro.oem_unlock_supported=1
+
+# Platform
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.vendor.mediatek.platform=MT6763 \
+    ro.vendor.mtk_config_max_dram_size=0x800000000 \
+    ro.vendor.mediatek.version.branch=alps-mp-q0.mp1 \
+    ro.vendor.mediatek.version.release=alps-mp-q0.mp1-V9.107 \
+    ro.vendor.mtk_wappush_support=1 \
+    ro.vendor.mtk_fd_support=1 \
+    ro.vendor.mtk_exchange_support=1
+
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+    ro.vendor.rc=/vendor/etc/init/hw/
+
+# Radio
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.vendor.radio.fd.counter=150 \
+    persist.vendor.radio.fd.off.counter=50 \
+    persist.vendor.radio.fd.r8.counter=150 \
+    persist.vendor.radio.fd.off.r8.counter=50 \
+    persist.vendor.operator.optr=CUST \
+    ro.vendor.mtk_protocol1_rat_config=Lf/W/G \
+    ro.vendor.mtk_md1_support=14 \
+    ro.vendor.mtk_c2k_lte_mode=0 \
+    ro.vendor.mtk_eccci_c2k=1 \
+    ro.vendor.mtk_ps1_rat=Lf/W/G \
+    ro.vendor.mtk_lte_support=1 \
+    ro.vendor.num_md_protocol=2 \
+    ro.vendor.mtk_world_phone_policy=0 \
+    ro.vendor.mtk_md_world_mode_support=1 \
+    ro.vendor.mtk_sim_hot_swap_common_slot=1 \
+    ro.vendor.mtk_rild_read_imsi=1 \
+    ro.vendor.sim_refresh_reset_by_modem=1 \
+    ro.vendor.mtk_external_sim_only_slots=0 \
+    ro.vendor.sim_me_lock_mode=0 \
+    ro.vendor.ap_info_monitor=0 \
+    ro.vendor.mtk_ril_mode=c6m_1rild \
+    persist.vendor.radio.smart.data.switch=1 \
+    persist.vendor.radio.mtk_dsbp_support=1 \
+    persist.vendor.radio.mtk_ps2_rat=L/W/G \
+    persist.vendor.radio.mtk_ps3_rat=G \
+    persist.vendor.log.tel_log_ctrl=1 \
+    ro.vendor.mtk_data_config=1 \
+    ro.vendor.mtk_embms_support=1 \
+    ro.vendor.md_log_memdump_wait=15 \
+    ro.vendor.md_prop_ver=1 \
+    ro.vendor.mtk_modem_monitor_support=1
 
 # SurfaceFlinger
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
@@ -42,6 +197,29 @@ PRODUCT_PROPERTY_OVERRIDES += \
     debug.sf.early_app_phase_offset_ns=500000 \
     debug.sf.early_gl_phase_offset_ns=3000000 \
     debug.sf.early_gl_app_phase_offset_ns=15000000
+
+# Telephony (SIM)
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.radio.multisim.config=dsds \
+    persist.vendor.radio.msimmode=dsds \
+    ro.vendor.radio.max.multisim=dsds \
+    ro.telephony.sim.count=2 \
+    persist.vendor.mtk_sim_switch_policy=2
+
+# Telephony
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    ro.telephony.default_network=10,10
+
+# Wifi
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.vendor.wlan.gen=gen2 \
+    ro.vendor.wifi.sap.interface=ap0
+
+# Wifi Display
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.vendor.wfd.dummy.enable=1 \
+    ro.vendor.wfd.iframesize.level=0 \
+    ro.vendor.mtk_wfd_support=1
 
 # MTK services log level
 PRODUCT_PROPERTY_OVERRIDES += \
