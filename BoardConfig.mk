@@ -125,6 +125,9 @@ TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.mt6763
 # Releasetools
 TARGET_RELEASETOOLS_EXTENSIONS := $(DEVICE_PATH)
 
+# Security patch level
+VENDOR_SECURITY_PATCH := 2020-11-05
+
 # SELinux
 include device/mediatek/sepolicy/sepolicy.mk
 #BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(DEVICE_PATH)/sepolicy/private
