@@ -31,6 +31,27 @@ def AddImage(info, basename, dest, incremental):
   common.ZipWriteStr(info.output_zip, name, data)
   info.script.AppendExtra('package_extract_file("%s", "%s");' % (name, dest))
 
+def AddFirmware(info, basename, dest, dest_second, incremental):
+  name = basename
+  if incremental:
+    input_zip = info.source_zip
+  else:
+    input_zip = info.input_zip
+  data = input_zip.read("RADIO/" + basename)
+  common.ZipWriteStr(info.output_zip, name, data)
+  info.script.AppendExtra('package_extract_file("%s", "%s");' % (name, dest))
+  if dest_second:
+    info.script.AppendExtra('package_extract_file("%s", "%s");' % (name, dest_second))
+
 def OTA_InstallEnd(info, incremental):
   info.script.Print("Patching device-tree image...")
   AddImage(info, "dtbo.img", "/dev/block/by-name/dtbo", incremental)
+  info.script.Print("Patching firmware images...")
+  AddFirmware(info, "logo.bin", "/dev/block/by-name/logo", False, incremental)
+  AddFirmware(info, "md1dsp.img", "/dev/block/by-name/md1dsp", False, incremental)
+  AddFirmware(info, "md1img.img", "/dev/block/by-name/md1img", False, incremental)
+  AddFirmware(info, "spmfw.img", "/dev/block/by-name/spmfw", False, incremental)
+  AddFirmware(info, "lk.img", "/dev/block/by-name/lk", "/dev/block/by-name/lk2", incremental)
+  AddFirmware(info, "sspm.img", "/dev/block/by-name/sspm_1", "/dev/block/by-name/sspm_2", incremental)
+  AddFirmware(info, "tee.img", "/dev/block/by-name/tee1", "/dev/block/by-name/tee2", incremental)
+  AddFirmware(info, "preloader.img", "/dev/block/mmcblk0boot0", "/dev/block/mmcblk0boot1", incremental)
