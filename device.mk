@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 
-$(call inherit-product-if-exists, vendor/gigaset/GS290/GS290-vendor.mk)
+$(call inherit-product, vendor/gigaset/GS290/GS290-vendor.mk)
 
 # Properties
 -include $(LOCAL_PATH)/product_prop.mk

@@ -1,9 +1,3 @@
-on init
-    # Disable vendor overlay
-    mount none /vendor/lost+found /vendor/overlay bind
-    # Mount kernel modules
-    mount none /system/lib/modules /vendor/lib/modules bind
-
 service aee_aedv /system/bin/true
     oneshot
     disabled
