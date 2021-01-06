@@ -32,4 +32,4 @@ def AddImage(info, basename, dest):
 
 def OTA_InstallEnd(info):
   info.script.Print("Patching device-tree image...")
-  AddImage(info, "dtbo.img", "/dev/block/bootdevice/by-name/dtbo")
+  AddImage(info, "dtbo.img", "/dev/block/by-name/dtbo")
