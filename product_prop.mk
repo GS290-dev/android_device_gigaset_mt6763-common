@@ -28,15 +28,6 @@ PRODUCT_PRODUCT_PROPERTIES += \
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.sf.lcd_density=420
 
-# Provides overrides to configure the Dalvik heap for a 4GB phone
-PRODUCT_PRODUCT_PROPERTIES += \
-    dalvik.vm.heapstartsize=8m \
-    dalvik.vm.heapgrowthlimit=192m \
-    dalvik.vm.heapsize=512m \
-    dalvik.vm.heaptargetutilization=0.6 \
-    dalvik.vm.heapminfree=8m \
-    dalvik.vm.heapmaxfree=16m
-
 # Disable ccodec
 PRODUCT_PRODUCT_PROPERTIES += \
     debug.stagefright.ccodec=0
