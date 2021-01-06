@@ -102,7 +102,15 @@ PRODUCT_PACKAGES += \
 
 # Init
 PRODUCT_PACKAGES += \
-    init.mt6763.rc
+    init.ago.rc \
+    init.connectivity.rc \
+    init.modem.rc \
+    init.mt6763.rc \
+    init.mt6763.usb.rc \
+    init.project.rc \
+    init.sensor_1_0.rc \
+    fstab.mt6763 \
+    ueventd.mt6763.rc
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/etc/fstab.mt6763:$(TARGET_COPY_OUT_RAMDISK)/fstab.mt6763
