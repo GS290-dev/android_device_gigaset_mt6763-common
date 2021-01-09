@@ -348,9 +348,37 @@ vendor/lib/libtface.so
 vendor/lib64/libkeystore-engine-wifi-hidl.so
 vendor/lib64/libkeystore-wifi-hidl.so
 
-# Media-Hardware
+# Media
+vendor/bin/hw/vendor.mediatek.hardware.mms@1.5-service
+vendor/etc/init/android.hardware.media.omx@1.0-service.rc
+vendor/etc/init/vendor.mediatek.hardware.mms@1.5-service.rc
+vendor/etc/mtk_omx_core.cfg
+vendor/lib/hw/vendor.mediatek.hardware.mms@1.5-impl.so
 vendor/lib/libstagefrighthw.so
+vendor/lib/libMtkOmxAdpcmDec.so
+vendor/lib/libMtkOmxAlacDec.so
+vendor/lib/libMtkOmxApeDec.so
+vendor/lib/libMtkOmxCore.so
+vendor/lib/libMtkOmxG711Dec.so
+vendor/lib/libMtkOmxGsmDec.so
+vendor/lib/libMtkOmxMp3Dec.so
+vendor/lib/libMtkOmxVdecEx.so
+vendor/lib/libMtkOmxVenc.so
+vendor/lib/vendor.mediatek.hardware.mms@1.0.so
+vendor/lib/vendor.mediatek.hardware.mms@1.1.so
+vendor/lib/vendor.mediatek.hardware.mms@1.2.so
+vendor/lib/vendor.mediatek.hardware.mms@1.3.so
+vendor/lib/vendor.mediatek.hardware.mms@1.4.so
+vendor/lib/vendor.mediatek.hardware.mms@1.5.so
+vendor/lib64/hw/vendor.mediatek.hardware.mms@1.5-impl.so
 vendor/lib64/libstagefrighthw.so
+vendor/lib64/libMtkOmxCore.so
+vendor/lib64/vendor.mediatek.hardware.mms@1.0.so
+vendor/lib64/vendor.mediatek.hardware.mms@1.1.so
+vendor/lib64/vendor.mediatek.hardware.mms@1.2.so
+vendor/lib64/vendor.mediatek.hardware.mms@1.3.so
+vendor/lib64/vendor.mediatek.hardware.mms@1.4.so
+vendor/lib64/vendor.mediatek.hardware.mms@1.5.so
 
 # Mediatek
 vendor/bin/hw/android.hardware.audio@5.0-service-mediatek
@@ -362,7 +390,6 @@ vendor/bin/hw/vendor.mediatek.hardware.log@1.0-service
 vendor/bin/hw/vendor.mediatek.hardware.mtkcodecservice@1.1-service
 vendor/bin/hw/vendor.mediatek.hardware.nvram@1.1-service
 vendor/bin/hw/vendor.mediatek.hardware.pq@2.2-service
-vendor/bin/hw/vendor.mediatek.hardware.mms@1.5-service
 vendor/bin/hw/modemdbfilter_service
 vendor/etc/init/android.hardware.audio@5.0-service-mediatek.rc
 vendor/etc/init/android.hardware.usb@1.1-service-mediatek.rc
@@ -372,7 +399,6 @@ vendor/etc/init/vendor.mediatek.hardware.log@1.0-service.rc
 vendor/etc/init/vendor.mediatek.hardware.mtkcodecservice@1.1-service.rc
 vendor/etc/init/vendor.mediatek.hardware.nvram@1.1-sevice.rc
 vendor/etc/init/vendor.mediatek.hardware.pq@2.2-service.rc
-vendor/etc/init/vendor.mediatek.hardware.mms@1.5-service.rc
 vendor/etc/init/modemdbfilter_service.rc
 vendor/etc/media_codecs_mediatek_audio.xml
 vendor/etc/media_codecs_mediatek_video.xml
@@ -403,15 +429,6 @@ vendor/lib/libmtkcutils.so
 vendor/lib/libmtkhardware_legacy.so
 vendor/lib/libmtklimiter_vendor.so
 vendor/lib/libmtknetutils.so
-vendor/lib/libMtkOmxAdpcmDec.so
-vendor/lib/libMtkOmxAlacDec.so
-vendor/lib/libMtkOmxApeDec.so
-vendor/lib/libMtkOmxCore.so
-vendor/lib/libMtkOmxG711Dec.so
-vendor/lib/libMtkOmxGsmDec.so
-vendor/lib/libMtkOmxMp3Dec.so
-vendor/lib/libMtkOmxVdecEx.so
-vendor/lib/libMtkOmxVenc.so
 vendor/lib/libmtkperf_client_vendor.so
 vendor/lib/libmtkproperty.so
 vendor/lib/libmtkrillog.so
@@ -423,12 +440,6 @@ vendor/lib/vendor.mediatek.hardware.audio@5.1.so
 vendor/lib/vendor.mediatek.hardware.camera.bgservice@1.0.so
 vendor/lib/vendor.mediatek.hardware.camera.bgservice@1.1.so
 vendor/lib/vendor.mediatek.hardware.gpu@1.0.so
-vendor/lib/vendor.mediatek.hardware.mms@1.0.so
-vendor/lib/vendor.mediatek.hardware.mms@1.1.so
-vendor/lib/vendor.mediatek.hardware.mms@1.2.so
-vendor/lib/vendor.mediatek.hardware.mms@1.3.so
-vendor/lib/vendor.mediatek.hardware.mms@1.4.so
-vendor/lib/vendor.mediatek.hardware.mms@1.5.so
 vendor/lib/vendor.mediatek.hardware.mtkcodecservice@1.1.so
 vendor/lib/vendor.mediatek.hardware.netdagent@1.0.so
 vendor/lib/vendor.mediatek.hardware.nvram@1.0.so
@@ -506,7 +517,6 @@ vendor/lib64/libmtkhardware_legacy.so
 vendor/lib64/libmtklimiter_vendor.so
 vendor/lib64/libmtknetcap.so
 vendor/lib64/libmtknetutils.so
-vendor/lib64/libMtkOmxCore.so
 vendor/lib64/libmtkperf_client_vendor.so
 vendor/lib64/libmtkproperty.so
 vendor/lib64/libmtkrillog.so
@@ -533,12 +543,6 @@ vendor/lib64/vendor.mediatek.hardware.gpu@1.0.so
 vendor/lib64/vendor.mediatek.hardware.lbs@1.0.so
 vendor/lib64/vendor.mediatek.hardware.log@1.0.so
 vendor/lib64/vendor.mediatek.hardware.mdmonitor@1.0.so
-vendor/lib64/vendor.mediatek.hardware.mms@1.0.so
-vendor/lib64/vendor.mediatek.hardware.mms@1.1.so
-vendor/lib64/vendor.mediatek.hardware.mms@1.2.so
-vendor/lib64/vendor.mediatek.hardware.mms@1.3.so
-vendor/lib64/vendor.mediatek.hardware.mms@1.4.so
-vendor/lib64/vendor.mediatek.hardware.mms@1.5.so
 vendor/lib64/vendor.mediatek.hardware.mtkcodecservice@1.1.so
 vendor/lib64/vendor.mediatek.hardware.mtkradioex@1.0.so
 vendor/lib64/vendor.mediatek.hardware.mtkradioex@1.1.so
@@ -829,7 +833,6 @@ vendor/etc/ipsec/ipsec.d/cacerts/VeriSignUniversalRootCertification.der
 vendor/etc/ipsec/ssl/openssl.cnf
 vendor/etc/ipsec/strongswan.conf
 vendor/etc/mpe.conf
-vendor/etc/mtk_omx_core.cfg
 vendor/etc/security/cacerts/00673b5b.0
 vendor/etc/security/cacerts/04f60c28.0
 vendor/etc/security/cacerts/0d69c7e1.0
