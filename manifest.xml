@@ -217,10 +217,6 @@
             <instance>default</instance>
         </interface>
     </hal>
-    <hal format="hidl" override="true">
-        <name>android.hardware.secure_element</name>
-        <transport>hwbinder</transport>
-    </hal>
     <hal format="hidl">
         <name>android.hardware.sensors</name>
         <transport>hwbinder</transport>
