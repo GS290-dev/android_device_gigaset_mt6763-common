@@ -57,10 +57,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     camera.disable_zsl_mode=1
 
-# Ccodec
-PRODUCT_PROPERTY_OVERRIDES += \
-    debug.stagefright.ccodec=0
-
 # Connsys
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.connsys.chipid=-1 \
