@@ -8,6 +8,19 @@ vendor/lib64/hw/android.hardware.audio@5.0-impl-mediatek.so|cfb593dbc25eec99692a
 vendor/lib64/vendor.mediatek.hardware.audio@5.1.so|08d6619179bbdff5a826d7b4c40ef44c2202cda6
 vendor/lib64/libaudioprimarydevicehalifclient.so|dd39a3f41983c423bb016cf316c4c803e3e179f1
 
+# AEE - from KF6J RP1A.200720.011
+vendor/bin/aeev|443af0549ae4aba8e5e10e321e6ec54e3543e007
+vendor/bin/aee_aedv|0939311498b2c3a7762f4ba7b1388eb082488e0e
+vendor/bin/aee_aedv64|867e542722fa804eccd5ab984de882c5abd71563
+vendor/bin/aee_dumpstatev|edc3d114292985547a8650d826ebc80f2ffaf842
+vendor/etc/aee-config|0253ad6dd8148a58f65dbea3b2cfe827448cf6d5
+vendor/etc/init/aee_aedv.rc|583f368556b910222456e60ece22a5e212351bfb
+vendor/etc/init/aee_aedv64.rc|2e92b573babf526b310364d5f1c3110c42681385
+vendor/lib/libladder.so|029d0a8392c8bb526448be8a4e188ecc6994c067
+vendor/lib/libaedv.so|6ca87e36505989bbede14731512283eb8eb14478
+vendor/lib64/libladder.so|2d83f0a98be3e6bd068c15e7f649836d794fae4b
+vendor/lib64/libaedv.so|89e307791fc7c2e5dc25ebb61e78823f5dfb9fb9
+
 # Camera-Mediatek
 lib64/libjni_pq.so
 lib64/vendor.mediatek.hardware.pq@2.0.so
