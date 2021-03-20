@@ -21,6 +21,18 @@ if [ ! -f "${HELPER}" ]; then
 fi
 source "${HELPER}"
 
+function blob_fixup() {
+    case "${1}" in
+        # Load VNDK-29 version of libmedia_helper
+        vendor/lib64/hw/audio.primary.mt6763.so)
+            "${PATCHELF}" --replace-needed libmedia_helper.so libmedia_helper-v29.so ${2}
+            ;;
+        vendor/lib/hw/audio.primary.mt6763.so)
+            "${PATCHELF}" --replace-needed libmedia_helper.so libmedia_helper-v29.so ${2}
+            ;;
+    esac
+}
+
 # Default to sanitizing the vendor folder before extraction
 CLEAN_VENDOR=true
 
