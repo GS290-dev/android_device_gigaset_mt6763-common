@@ -46,11 +46,6 @@ bin/vtservice
 etc/init/init.vtservice.rc
 framework/mediatek-ims-extension-plugin.jar
 framework/mediatek-ims-legacy.jar
-lib/libcomutils.so
-lib/libimsma.so
-lib/libimsma_adapt.so
-lib/libimsma_rtp.so
-lib/libimsma_socketwrapper.so
 lib/libmtk_vt_service.so
 lib/libmtk_vt_wrapper.so
 lib/libmtkaudio_utils.so
@@ -58,12 +53,6 @@ lib/libmtkavenhancements.so
 lib/libmtklimiter.so
 lib/libmtkperf_client.so
 lib/libmtkshifter.so
-lib/libsignal.so
-lib/libsink.so
-lib/libsource.so
-lib/libvcodec_cap.so
-lib/libvcodec_capenc.so
-lib/libvt_avsync.so
 lib/vendor.mediatek.hardware.videotelephony@1.0.so
 lib64/libmtk_vt_wrapper.so
 lib64/libmtkaudio_utils.so
@@ -71,9 +60,24 @@ lib64/libmtkavenhancements.so
 lib64/libmtklimiter.so
 lib64/libmtkperf_client.so
 lib64/libmtkshifter.so
-lib64/libvcodec_cap.so
-lib64/libvcodec_capenc.so
 lib64/vendor.mediatek.hardware.videotelephony@1.0.so
+
+# MTK-IMS-R - from KF6J RP1A.200720.011
+lib/libcomutils.so|077843d82d8689718d99542cee113cf2000f9243
+lib/libsignal.so|b52ca9eefa845d7801f6515511ca863ed7acb796
+lib/libsink.so|176bc403f45819a10e0ed4fa74edb8a5ec65e7bb
+lib/libsource.so|4b6549b0acc20a7a4b1a565fe092f20b2dc96e31
+lib/libimsma.so|035f46e39b03a4d57478fc9b93b253344554e4d6
+lib/libimsma_adapt.so|f860d9d72484baa934fea0a78b4b1ef40c83b22c
+lib/libimsma_rtp.so|321d4f4356b122846f3152700cd44fc5af8eed06
+lib/libimsma_socketwrapper.so|4dc6cbecf1ce4b259d69ad86d77c7db51d843f31
+lib/libvt_avsync.so|b151d76ea3846a20708cd04f9ef38f4f42ad24eb
+lib/libvcodec_cap.so|d39134c99bd7c42528b39c051716db72e4e9f20b
+lib/libvcodec_capenc.so|acc2e9187b0aaa7694128634bc83b998da955932
+lib/vendor.mediatek.hardware.mms@1.0.so|b3067045bb342518e4a79b43398c23afc560ca88
+lib/vendor.mediatek.hardware.mms@1.1.so|d451172971c7582268a0118a22b86ef22911ab6f
+lib64/libvcodec_cap.so|e27c3cabe78440b48b5a1dbc25a3f4aca5b23add
+lib64/libvcodec_capenc.so|88e42ca3d345ae1e681dafef236ee3014ff03ca1
 
 # WiFi - from KF6J RP1A.200720.011
 vendor/bin/hw/wpa_supplicant|457beb4d6f5a4d0f2843f79b4e9fa520b00ff9ba
