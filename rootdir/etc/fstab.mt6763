@@ -11,8 +11,9 @@
 /dev/block/platform/bootdevice/by-name/recovery     /recovery          emmc        defaults                                              first_stage_mount,nofail
 /dev/block/platform/bootdevice/by-name/boot         /boot              emmc        defaults                                              first_stage_mount,nofail
 /dev/block/platform/bootdevice/by-name/para         /misc              emmc        defaults                                              defaults
-/dev/block/platform/bootdevice/by-name/userdata     /data              ext4        noatime,nosuid,nodev,noauto_da_alloc,errors=panic     wait,check,formattable,quota,reservedsize=128m,formattable,resize,forcefdeorfbe=/dev/block/platform/bootdevice/by-name/metadata
 /dev/block/platform/bootdevice/by-name/cache        /cache             ext4        noatime,nosuid,nodev,noauto_da_alloc,discard          wait,check,formattable
+/dev/block/platform/bootdevice/by-name/userdata     /data              f2fs        noatime,nosuid,nodev,discard,reserve_root=32768,resgid=1065,fsync_mode=nobarrier       latemount,wait,check,fileencryption=aes-256-xts:aes-256-cts,quota,formattable,reservedsize=128M
+/dev/block/platform/bootdevice/by-name/userdata     /data              ext4        nosuid,nodev,barrier=1,noatime,noauto_da_alloc,errors=continue       latemount,wait,check,fileencryption=aes-256-xts:aes-256-cts,quota,formattable,reservedsize=128M
 
 /dev/block/platform/bootdevice/by-name/protect1     /mnt/vendor/protect_f    ext4     noatime,nosuid,nodev,noauto_da_alloc,commit=1,nodelalloc      wait,check,formattable
 /dev/block/platform/bootdevice/by-name/protect2     /mnt/vendor/protect_s    ext4     noatime,nosuid,nodev,noauto_da_alloc,commit=1,nodelalloc      wait,check,formattable
