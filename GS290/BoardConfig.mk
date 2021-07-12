@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2018-2019 The LineageOS Project
+# Copyright (C) 2017-2019 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -14,14 +14,8 @@
 # limitations under the License.
 #
 
-PRODUCT_MAKEFILES := \
-    lineage_GS290:$(LOCAL_DIR)/GS290/lineage_GS290.mk \
-    lineage_yggdrasil:$(LOCAL_DIR)/yggdrasil/lineage_yggdrasil.mk
+BOARD_VENDOR := gigaset
 
-COMMON_LUNCH_CHOICES := \
-    lineage_GS290-user \
-    lineage_GS290-userdebug \
-    lineage_GS290-eng \
-    lineage_yggdrasil-user \
-    lineage_yggdrasil-userdebug \
-    lineage_yggdrasil-eng
+DEVICE_PATH := device/gigaset/GS290-unified
+
+-include $(DEVICE_PATH)/BoardConfig.mk

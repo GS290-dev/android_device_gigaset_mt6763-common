@@ -14,10 +14,6 @@
 # limitations under the License.
 #
 
-BOARD_VENDOR := gigaset
-
-DEVICE_PATH := device/gigaset/GS290
-
 BUILD_BROKEN_DUP_RULES := true
 
 # Architecture
