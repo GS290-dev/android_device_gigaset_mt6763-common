@@ -444,6 +444,13 @@ vendor/lib64/libarcsoft_high_dynamic_range.so
 vendor/lib64/libarcsoft_picselfie_algorithm.so
 vendor/lib64/libarcsoft_aiscenedetection.so
 
+# Camera-Mediatek
+lib64/libjni_pq.so
+lib64/vendor.mediatek.hardware.pq@2.0.so
+lib64/vendor.mediatek.hardware.pq@2.1.so
+lib64/vendor.mediatek.hardware.pq@2.2.so
+lib64/vendor.mediatek.hardware.pq@2.3.so
+
 # DRM-Widevine
 vendor/bin/hw/android.hardware.drm@1.2-service.widevine
 vendor/etc/init/android.hardware.drm@1.2-service.widevine.rc
