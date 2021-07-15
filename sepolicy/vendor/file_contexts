@@ -1,0 +1,5 @@
+# FingerPrint
+/dev/focaltech_fp                u:object_r:fp_device:s0
+
+# Light
+/vendor/bin/hw/android\.hardware\.light@2\.0-service\.GS290      u:object_r:hal_light_default_exec:s0
