@@ -147,9 +147,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.mtk_fd_support=1 \
     ro.vendor.mtk_exchange_support=1
 
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
-    ro.vendor.rc=/vendor/etc/init/hw/
-
 # Radio
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.radio.fd.counter=150 \

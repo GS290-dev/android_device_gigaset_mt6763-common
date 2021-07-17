@@ -1,4 +1,3 @@
-# MTK platform .rc configure
 on post-fs-data
     # Sensor
     # prize-modify-tangcong-20200103-start

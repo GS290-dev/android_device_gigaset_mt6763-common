@@ -122,12 +122,10 @@ PRODUCT_PACKAGES += \
 
 # Init
 PRODUCT_PACKAGES += \
-    init.ago.rc \
     init.connectivity.rc \
     init.modem.rc \
     init.mt6763.rc \
     init.mt6763.usb.rc \
-    init.project.rc \
     init.sensor_1_0.rc \
     fstab.mt6763 \
     ueventd.mt6763.rc
