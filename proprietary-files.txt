@@ -896,6 +896,7 @@ vendor/bin/hw/android.hardware.sensors@2.0-service-mediatek
 vendor/etc/init/android.hardware.sensors@2.0-service-mediatek.rc
 vendor/lib64/hw/sensors.mt6763.so
 vendor/lib64/libksensor.so
+vendor/lib64/libvtclib.so
 
 # Thermal
 vendor/bin/thermal

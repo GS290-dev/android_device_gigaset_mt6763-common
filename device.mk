@@ -250,7 +250,8 @@ PRODUCT_COPY_FILES += \
 
 # Sensors
 PRODUCT_PACKAGES += \
-    libsensorndkbridge
+    libsensorndkbridge \
+    libstdc++.vendor
 
 # Soong
 PRODUCT_SOONG_NAMESPACES += \
