@@ -181,6 +181,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.md_prop_ver=1 \
     ro.vendor.mtk_modem_monitor_support=1
 
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+    ro.vendor.mtk_telephony_add_on_policy=0
+
 # SurfaceFlinger
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     ro.surface_flinger.max_frame_buffer_acquired_buffers=3 \
