@@ -144,7 +144,7 @@ PRODUCT_PACKAGES += \
 
 # Light
 PRODUCT_PACKAGES += \
-    android.hardware.light@2.0-service.GS290
+    android.hardware.light@2.0-service.mt6763
 
 # Media
 PRODUCT_PACKAGES += \
