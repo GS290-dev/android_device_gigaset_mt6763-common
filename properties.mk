@@ -25,8 +25,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.mtk_audio_alac_support=1 \
     ro.vendor.mtk_audio_ape_support=1 \
     ro.vendor.mtk_audio_tuning_tool_ver=V2.2 \
-    ro.vendor.mtk_besloudness_support=1 \
-    ro.vendor.mtk_aal_support=1
+    ro.vendor.mtk_besloudness_support=1
 
 # Bluetooth
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -51,7 +50,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     vendor.camera.mdp.dre.enable=0 \
     vendor.camera.mdp.cz.enable=1 \
     ro.vendor.mtk_zsdhdr_support=1 \
-    ro.vendor.mtk_slow_motion_support=1 \
     ro.vendor.mtk_camera_app_version=3
 
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
