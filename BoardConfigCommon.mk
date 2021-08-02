@@ -65,9 +65,6 @@ TARGET_KERNEL_ADDITIONAL_FLAGS := \
     DTC=$(shell pwd)/prebuilts/misc/$(HOST_OS)-x86/dtc/dtc \
     MKDTIMG=$(shell pwd)/prebuilts/misc/$(HOST_OS)-x86/libufdt/mkdtimg
 
-# OTA
-TARGET_OTA_ASSERT_DEVICE += k63v2_64_bsp
-
 # Platform
 TARGET_BOARD_PLATFORM := mt6763
 
