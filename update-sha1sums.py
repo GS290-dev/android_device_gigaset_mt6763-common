@@ -20,7 +20,7 @@ import os
 import sys
 from hashlib import sha1
 
-DEVICE = 'GS290'
+DEVICE = 'mt6763-common'
 VENDOR = 'gigaset'
 VENDOR_PATH = os.path.join(
     *['..', '..', '..', 'vendor', VENDOR, DEVICE, 'proprietary'])

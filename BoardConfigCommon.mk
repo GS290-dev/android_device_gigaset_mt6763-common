@@ -66,7 +66,7 @@ TARGET_KERNEL_ADDITIONAL_FLAGS := \
     MKDTIMG=$(shell pwd)/prebuilts/misc/$(HOST_OS)-x86/libufdt/mkdtimg
 
 # OTA
-TARGET_OTA_ASSERT_DEVICE := GS290,yggdrasil,k63v2_64_bsp
+TARGET_OTA_ASSERT_DEVICE := GX290,yggdrasilx,GS290,yggdrasil,k63v2_64_bsp
 
 # Platform
 TARGET_BOARD_PLATFORM := mt6763
@@ -145,4 +145,4 @@ BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --flags 2
 BOARD_PREBUILT_VBMETAIMAGE := $(DEVICE_PATH)/prebuilt/vbmeta.img
 
 # Inherit from the proprietary version
--include vendor/gigaset/GS290/BoardConfigVendor.mk
+-include vendor/gigaset/mt6763-common/BoardConfigVendor.mk
