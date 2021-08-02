@@ -59,8 +59,6 @@ BOARD_KERNEL_SEPARATED_DTBO := true
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_HEADER_ARCH := arm64
 TARGET_KERNEL_CLANG_COMPILE := true
-TARGET_KERNEL_SOURCE := kernel/gigaset/mt6763
-TARGET_KERNEL_CONFIG := gs290_defconfig
 TARGET_KERNEL_ADDITIONAL_FLAGS := \
     DTC=$(shell pwd)/prebuilts/misc/$(HOST_OS)-x86/dtc/dtc \
     MKDTIMG=$(shell pwd)/prebuilts/misc/$(HOST_OS)-x86/libufdt/mkdtimg
@@ -90,7 +88,6 @@ BOARD_CHARGER_DISABLE_INIT_BLANK := true
 
 # Display
 TARGET_USES_HWC2 := true
-TARGET_SCREEN_DENSITY := 420
 
 # DRM
 TARGET_ENABLE_MEDIADRM_64 := true
