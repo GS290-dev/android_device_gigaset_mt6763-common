@@ -48,8 +48,6 @@ BOARD_RAMDISK_OFFSET := 0x14f88000
 BOARD_SECOND_OFFSET := 0x00e88000
 BOARD_KERNEL_TAGS_OFFSET := 0x13f88000
 BOARD_BOOT_HEADER_VERSION := 2
-BOARD_CUSTOM_BOOTIMG := true
-BOARD_CUSTOM_BOOTIMG_MK := $(PLATFORM_PATH)/mkbootimg.mk
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset $(BOARD_RAMDISK_OFFSET)
 BOARD_MKBOOTIMG_ARGS += --tags_offset $(BOARD_KERNEL_TAGS_OFFSET)
 BOARD_MKBOOTIMG_ARGS += --kernel_offset $(BOARD_KERNEL_OFFSET)
@@ -136,9 +134,17 @@ BOARD_SEPOLICY_DIRS += $(PLATFORM_PATH)/sepolicy/vendor
 
 # Android Verified Boot
 BOARD_AVB_ENABLE := true
+
+ifneq ($(strip $(TARGET_BUILD_VARIANT)), user)
+BOARD_CUSTOM_BOOTIMG := true
+BOARD_CUSTOM_BOOTIMG_MK := $(PLATFORM_PATH)/mkbootimg.mk
+
 BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --set_hashtree_disabled_flag
 BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --flags 2
 BOARD_PREBUILT_VBMETAIMAGE := $(PLATFORM_PATH)/prebuilt/vbmeta.img
+else
+MAIN_VBMETA_IN_BOOT := yes
+endif
 
 # Inherit from the proprietary version
 -include vendor/gigaset/mt6763-common/BoardConfigVendor.mk
