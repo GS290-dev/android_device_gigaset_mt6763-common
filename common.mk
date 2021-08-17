@@ -128,7 +128,8 @@ PRODUCT_COPY_FILES += \
 
 # Keylayout
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/keylayout/ff_key.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/ff_key.kl
+    $(LOCAL_PATH)/keylayout/ff_key.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/ff_key.kl \
+    $(LOCAL_PATH)/keylayout/sf-keys.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/sf-keys.kl
 
 # Keystore
 PRODUCT_PACKAGES += \
