@@ -94,13 +94,6 @@ on charger
     start light-hal-2-0
     start health-hal-2-0
 
-    start charger
-
-service charger /system/bin/charger
-    class charger
-    group system wakelock
-    capabilities BLOCK_SUSPEND SYS_ADMIN SYS_BOOT
-
 on fs
     write /proc/bootprof "INIT:Mount_START"
     write /sys/kernel/debug/tracing/trace_marker "B|1|Mount"

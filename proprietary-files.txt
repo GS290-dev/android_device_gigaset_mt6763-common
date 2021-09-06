@@ -5,6 +5,11 @@ lib64/vendor.mediatek.hardware.pq@2.1.so
 lib64/vendor.mediatek.hardware.pq@2.2.so
 lib64/vendor.mediatek.hardware.pq@2.3.so
 
+# Charger
+bin/kpoc_charger
+etc/init/kpoc_charger.rc
+lib/libshowlogo.so
+
 # MTK-IMS
 -framework/mediatek-common.jar
 -framework/mediatek-framework.jar
