@@ -22,5 +22,8 @@
 /dev/block/platform/bootdevice/by-name/nvcfg        /mnt/vendor/nvcfg        ext4     noatime,nosuid,nodev,noauto_da_alloc,commit=1,nodelalloc      wait,check,formattable
 /dev/block/platform/bootdevice/by-name/persist      /mnt/vendor/persist      ext4     noatime,nosuid,nodev,noauto_da_alloc,commit=1,nodelalloc      wait,check,formattable
 
+/dev/block/platform/bootdevice/by-name/nvram        /nvram                   emmc     defaults                                                      defaults
+/dev/block/platform/bootdevice/by-name/proinfo      /proinfo                 emmc     defaults                                                      defaults
+
 /devices/platform/externdevice*                     auto                     auto     defaults                                                      voldmanaged=sdcard1:auto,encryptable=userdata
 /devices/platform/mt_usb*                           auto                     vfat     defaults                                                      voldmanaged=usbotg:auto
