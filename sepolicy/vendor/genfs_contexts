@@ -1,2 +1,0 @@
-# Health
-genfscon sysfs /devices/platform/11007000.i2c/i2c-0/0-0062/power_supply/cw-bat  u:object_r:sysfs_battery_supply:s0
