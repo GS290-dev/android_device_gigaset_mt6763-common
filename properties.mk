@@ -94,6 +94,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.mtk_agps_app=1 \
     ro.vendor.mtk_gps_support=1
 
+# HWUI
+PRODUCT_PROPERTY_OVERRIDES += \
+    debug.hwui.use_hint_manager=true \
+    debug.hwui.target_cpu_time_percent=30
+
 # IMS
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.ims_support=1 \
