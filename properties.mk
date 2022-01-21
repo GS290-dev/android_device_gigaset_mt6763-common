@@ -67,6 +67,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.crypto.volume.filenames_mode=aes-256-cts
 
+# Dalvik
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+    dalvik.vm.dex2oat64.enabled=true
+
 # Display
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.opengles.version=196610 \
