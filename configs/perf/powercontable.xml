@@ -27,7 +27,7 @@
         <Entry path="/sys/devices/system/cpu/sched/sched_boost"></Entry>
         <LegacyCmdID>73</LegacyCmdID>
         <Compare>more</Compare>
-        <MaxValue>2</MaxValue>
+        <MaxValue>6</MaxValue>
         <MinValue>0</MinValue>
     </CMD>
     <CMD name="PERF_RES_GPU_GED_BENCHMARK_ON" id="0x00c0c000">
