@@ -14,26 +14,22 @@
 
 LOCAL_PATH := $(call my-dir)
 
-$(INSTALLED_BOOTIMAGE_TARGET): $(MKBOOTIMG) $(AVBTOOL) $(INTERNAL_BOOTIMAGE_FILES) $(BOOTIMAGE_EXTRA_DEPS) $(BOARD_AVB_BOOT_KEY_PATH) $(BOARD_PREBUILT_VBMETAIMAGE)
+$(INSTALLED_BOOTIMAGE_TARGET): $(MKBOOTIMG) $(AVBTOOL) $(INTERNAL_BOOTIMAGE_FILES) $(BOARD_AVB_BOOT_KEY_PATH) $(BOARD_GKI_SIGNING_KEY_PATH) $(BOOTIMAGE_EXTRA_DEPS) $(BOARD_PREBUILT_VBMETAIMAGE) $(INSTALLED_KERNEL_TARGET)
 	$(call pretty,"Target boot image: $@")
-	$(hide) $(MKBOOTIMG) $(INTERNAL_BOOTIMAGE_ARGS) $(INTERNAL_MKBOOTIMG_VERSION_ARGS) $(BOARD_MKBOOTIMG_ARGS) --output $@
-	$(hide) $(call assert-max-image-size,$@,$(BOARD_BOOTIMAGE_PARTITION_SIZE),raw)
-	$(hide) $(AVBTOOL) add_hash_footer \
-	  --image $@ \
-	  --partition_size $(BOARD_BOOTIMAGE_PARTITION_SIZE) \
-	  --partition_name boot $(INTERNAL_AVB_BOOT_SIGNING_ARGS) \
-	  $(BOARD_AVB_BOOT_ADD_HASH_FOOTER_ARGS)
+	$(MKBOOTIMG) --kernel $(call bootimage-to-kernel,$@) $(INTERNAL_BOOTIMAGE_ARGS) $(INTERNAL_MKBOOTIMG_VERSION_ARGS) \
+		$(INTERNAL_MKBOOTIMG_GKI_SINGING_ARGS) $(BOARD_MKBOOTIMG_ARGS) --output $@
+	$(call assert-max-image-size,$@,$(call get-hash-image-max-size,$(call get-bootimage-partition-size,$@,boot)))
+	$(AVBTOOL) add_hash_footer \
+		--image $@ \
+		--partition_size $(call get-bootimage-partition-size,$@,boot) \
+		--partition_name boot $(INTERNAL_AVB_BOOT_SIGNING_ARGS) \
+		$(BOARD_AVB_BOOT_ADD_HASH_FOOTER_ARGS)
 	$(hide) $(AVBTOOL) append_vbmeta_image --image $@ --partition_size $(BOARD_BOOTIMAGE_PARTITION_SIZE) --vbmeta_image $(BOARD_PREBUILT_VBMETAIMAGE)
-	@echo "Made boot image: $@"
 
-$(INSTALLED_RECOVERYIMAGE_TARGET): $(MKBOOTIMG) $(AVBTOOL) $(recovery_ramdisk) $(recovery_kernel) $(RECOVERYIMAGE_EXTRA_DEPS) $(BOARD_AVB_BOOT_KEY_PATH) $(BOARD_PREBUILT_VBMETAIMAGE)
-	@echo "----- Making recovery image ------"
-	$(hide) $(MKBOOTIMG) $(INTERNAL_RECOVERYIMAGE_ARGS) $(INTERNAL_MKBOOTIMG_VERSION_ARGS) $(BOARD_MKBOOTIMG_ARGS) --output $@
-	$(hide) $(call assert-max-image-size,$@,$(BOARD_RECOVERYIMAGE_PARTITION_SIZE),raw)
-	$(hide) $(AVBTOOL) add_hash_footer \
-	  --image $@ \
-	  --partition_size $(BOARD_RECOVERYIMAGE_PARTITION_SIZE) \
-	  --partition_name recovery $(INTERNAL_AVB_RECOVERY_SIGNING_ARGS) \
-	  $(BOARD_AVB_RECOVERY_ADD_HASH_FOOTER_ARGS)
-	$(hide) $(AVBTOOL) append_vbmeta_image --image $@ --partition_size $(BOARD_RECOVERYIMAGE_PARTITION_SIZE) --vbmeta_image $(BOARD_PREBUILT_VBMETAIMAGE)
-	@echo "Made recovery image: $@"
+$(INSTALLED_RECOVERYIMAGE_TARGET): $(recoveryimage-deps) $(RECOVERYIMAGE_EXTRA_DEPS) $(BOARD_PREBUILT_VBMETAIMAGE) $(INSTALLED_KERNEL_TARGET) $(INSTALLED_RECOVERY_KERNEL)
+	$(MKBOOTIMG) --kernel $(strip $(recovery_kernel)) $(INTERNAL_RECOVERYIMAGE_ARGS) \
+		$(INTERNAL_MKBOOTIMG_VERSION_ARGS) $(INTERNAL_MKBOOTIMG_GKI_SINGING_ARGS) \
+		$(BOARD_RECOVERY_MKBOOTIMG_ARGS) --output $@
+	$(call assert-max-image-size,$@,$(call get-hash-image-max-size,$(BOARD_RECOVERYIMAGE_PARTITION_SIZE)))
+	$(AVBTOOL) add_hash_footer --image $@ --partition_size $(BOARD_RECOVERYIMAGE_PARTITION_SIZE) --partition_name recovery $(INTERNAL_AVB_RECOVERY_SIGNING_ARGS) $(BOARD_AVB_RECOVERY_ADD_HASH_FOOTER_ARGS)
+	$(hide) $(AVBTOOL) append_vbmeta_image --image $@ --partition_size $(BOARD_BOOTIMAGE_PARTITION_SIZE) --vbmeta_image $(BOARD_PREBUILT_VBMETAIMAGE)
