@@ -30,6 +30,21 @@ cc_library_shared {
     ],
 }
 
+cc_library_shared {
+    name: "libshim_mtkcam",
+    vendor_available: true,
+    srcs: [
+        "PropertyMap.cpp",
+        "PropertyMap_fuzz.cpp",
+    ],
+    include_dirs: [ "frameworks/native/include" ],
+    shared_libs: [
+        "libutils",
+        "libbase",
+        "liblog",
+    ],
+}
+
 java_library {
     name: "ImsServiceBase",
     installable: true,

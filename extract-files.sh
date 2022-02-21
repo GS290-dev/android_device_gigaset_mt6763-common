@@ -33,6 +33,9 @@ function blob_fixup() {
         lib/libsink.so)
             "${PATCHELF}" --add-needed "libshim_vtservice.so" "${2}"
             ;;
+        vendor/lib64/libmtkcam_stdutils.so)
+            "${PATCHELF}" --add-needed "libshim_mtkcam.so" "${2}"
+            ;;
     esac
 }
 
