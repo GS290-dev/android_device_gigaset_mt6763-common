@@ -36,6 +36,9 @@ function blob_fixup() {
         vendor/lib64/libmtkcam_stdutils.so)
             "${PATCHELF}" --add-needed "libshim_mtkcam.so" "${2}"
             ;;
+        vendor/bin/hw/android.hardware.keymaster@4.0-service.beanpod)
+            "${PATCHELF}" --add-needed "libshim_beanpod.so" "${2}"
+            ;;
     esac
 }
 
