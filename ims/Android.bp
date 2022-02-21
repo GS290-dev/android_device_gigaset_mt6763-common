@@ -43,6 +43,11 @@ cc_library_shared {
     ],
 }
 
+cc_library_shared {
+    name: "libshim_beanpod",
+    srcs: ["libshim_beanpod.cpp"],
+}
+
 java_library {
     name: "ImsServiceBase",
     installable: true,

@@ -338,7 +338,9 @@ PRODUCT_BOOT_JARS += \
 
 PRODUCT_PACKAGES += \
     ImsServiceBase \
-    libshim_vtservice
+    libshim_vtservice \
+    libshim_mtkcam \
+    libshim_beanpod
 
 # Thermal
 PRODUCT_PACKAGES += \
