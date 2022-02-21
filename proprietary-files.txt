@@ -1,7 +1,7 @@
 # Audio-Hardware (HIDL) - from KF6J RP1A.200720.011
 vendor/bin/hw/android.hardware.audio@5.0-service-mediatek|7d8173d321717056f1aad4ee5250cd23d0152780
 vendor/etc/init/android.hardware.audio@5.0-service-mediatek.rc|d2f25ca256ef25f6b98f38431d545fe671cf76b3
-vendor/lib/hw/android.hardware.audio@5.0-impl-mediatek.so|066d59c5ba973df968a4c8665a0c6e0f2355656b
+vendor/lib/hw/android.hardware.audio@5.0-impl-mediatek.so|53b3a0899a7a77d15bada842f1158c8c24f013ae
 vendor/lib/vendor.mediatek.hardware.audio@5.1.so|8bf798ce812ea43cfc3595d64c47cd2bac3415f8
 vendor/lib/libaudioprimarydevicehalifclient.so|5d51ea04be6da3066c5e1fffa546b6dd8ee4cc75
 vendor/lib64/hw/android.hardware.audio@5.0-impl-mediatek.so|cfb593dbc25eec99692a454ba0da43d519b415cb
@@ -21,51 +21,10 @@ vendor/lib/libaedv.so|6ca87e36505989bbede14731512283eb8eb14478
 vendor/lib64/libladder.so|2d83f0a98be3e6bd068c15e7f649836d794fae4b
 vendor/lib64/libaedv.so|89e307791fc7c2e5dc25ebb61e78823f5dfb9fb9
 
-# Camera-Mediatek
-lib64/libjni_pq.so
-lib64/vendor.mediatek.hardware.pq@2.0.so
-lib64/vendor.mediatek.hardware.pq@2.1.so
-lib64/vendor.mediatek.hardware.pq@2.2.so
-lib64/vendor.mediatek.hardware.pq@2.3.so
-
-# Charger
-bin/kpoc_charger
-etc/init/kpoc_charger.rc
-lib/libshowlogo.so
-
-# MTK-IMS
--framework/mediatek-common.jar
--framework/mediatek-framework.jar
--framework/mediatek-ims-base.jar
--framework/mediatek-ims-common.jar
--framework/mediatek-telecom-common.jar
--framework/mediatek-telephony-base.jar
--framework/mediatek-telephony-common.jar
--priv-app/ImsService/ImsService.apk|1bb78a0aac8de7ecbce5d0ee9432b3f701678601
-bin/vtservice
-etc/init/init.vtservice.rc
-framework/mediatek-ims-extension-plugin.jar
-framework/mediatek-ims-legacy.jar
-lib/libmtk_vt_service.so
-lib/libmtk_vt_wrapper.so
-lib/libmtkaudio_utils.so
-lib/libmtkavenhancements.so
-lib/libmtklimiter.so
-lib/libmtkperf_client.so
-lib/libmtkshifter.so
-lib/vendor.mediatek.hardware.videotelephony@1.0.so
-lib64/libmtk_vt_wrapper.so
-lib64/libmtkaudio_utils.so
-lib64/libmtkavenhancements.so
-lib64/libmtklimiter.so
-lib64/libmtkperf_client.so
-lib64/libmtkshifter.so
-lib64/vendor.mediatek.hardware.videotelephony@1.0.so
-
 # MTK-IMS-R - from KF6J RP1A.200720.011
 lib/libcomutils.so|077843d82d8689718d99542cee113cf2000f9243
 lib/libsignal.so|b52ca9eefa845d7801f6515511ca863ed7acb796
-lib/libsink.so|176bc403f45819a10e0ed4fa74edb8a5ec65e7bb
+lib/libsink.so|f19e43e8fd8a9ced64c0683dbb277859f4b8b735
 lib/libsource.so|4b6549b0acc20a7a4b1a565fe092f20b2dc96e31
 lib/libimsma.so|035f46e39b03a4d57478fc9b93b253344554e4d6
 lib/libimsma_adapt.so|f860d9d72484baa934fea0a78b4b1ef40c83b22c
@@ -94,3 +53,44 @@ vendor/lib64/libwifi-hal.so|e9c5450bc0b29b9a31474dd95e09226715b7c3ca
 vendor/lib64/vendor.mediatek.hardware.wifi.supplicant@2.0.so|24e1fdbb2a59d0e94e6e2364ff7163cb9dc91e44
 vendor/lib64/vendor.mediatek.hardware.wifi.supplicant@2.1.so|6f8f19430e122ae46615b8a8f560852cc46f3f23
 vendor/lib64/vendor.mediatek.hardware.wifi.supplicant@2.2.so|24cd1b0bed14dcc9896400f01cc4b5e67396464b
+
+# Camera-Mediatek
+lib64/libjni_pq.so
+lib64/vendor.mediatek.hardware.pq@2.0.so
+lib64/vendor.mediatek.hardware.pq@2.1.so
+lib64/vendor.mediatek.hardware.pq@2.2.so
+lib64/vendor.mediatek.hardware.pq@2.3.so
+
+# Charger
+bin/kpoc_charger
+etc/init/kpoc_charger.rc
+lib/libshowlogo.so
+
+# MTK-IMS
+-framework/mediatek-common.jar
+-framework/mediatek-framework.jar
+-framework/mediatek-ims-base.jar
+-framework/mediatek-ims-common.jar
+-framework/mediatek-telecom-common.jar
+-framework/mediatek-telephony-base.jar
+-framework/mediatek-telephony-common.jar
+bin/vtservice
+etc/init/init.vtservice.rc
+framework/mediatek-ims-extension-plugin.jar
+framework/mediatek-ims-legacy.jar
+lib/libmtk_vt_service.so
+lib/libmtk_vt_wrapper.so
+lib/libmtkaudio_utils.so
+lib/libmtkavenhancements.so
+lib/libmtklimiter.so
+lib/libmtkperf_client.so
+lib/libmtkshifter.so
+lib/vendor.mediatek.hardware.videotelephony@1.0.so
+lib64/libmtk_vt_wrapper.so
+lib64/libmtkaudio_utils.so
+lib64/libmtkavenhancements.so
+lib64/libmtklimiter.so
+lib64/libmtkperf_client.so
+lib64/libmtkshifter.so
+lib64/vendor.mediatek.hardware.videotelephony@1.0.so
+-priv-app/ImsService/ImsService.apk|1bb78a0aac8de7ecbce5d0ee9432b3f701678601
