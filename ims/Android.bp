@@ -31,6 +31,7 @@ cc_library_shared {
 
 cc_library_shared {
     name: "libshim_mtkcam",
+    vendor_available: true,
     srcs: [
         "PropertyMap.cpp",
         "PropertyMap_fuzz.cpp",
@@ -46,6 +47,7 @@ cc_library_shared {
 cc_library_shared {
     name: "libshim_beanpod",
     srcs: ["libshim_beanpod.cpp"],
+    vendor_available: true,
 }
 
 java_library {
