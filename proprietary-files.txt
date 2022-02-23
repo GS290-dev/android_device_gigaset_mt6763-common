@@ -152,9 +152,7 @@ vendor/bin/aee_aedv|0939311498b2c3a7762f4ba7b1388eb082488e0e
 vendor/bin/aee_aedv64|867e542722fa804eccd5ab984de882c5abd71563
 vendor/bin/aee_dumpstatev|edc3d114292985547a8650d826ebc80f2ffaf842
 vendor/etc/aee-config|0253ad6dd8148a58f65dbea3b2cfe827448cf6d5
-vendor/lib/libladder.so|029d0a8392c8bb526448be8a4e188ecc6994c067
 vendor/lib/libaedv.so|6ca87e36505989bbede14731512283eb8eb14478
-vendor/lib64/libladder.so|2d83f0a98be3e6bd068c15e7f649836d794fae4b
 vendor/lib64/libaedv.so|89e307791fc7c2e5dc25ebb61e78823f5dfb9fb9
 
 # Bluetooth
@@ -656,6 +654,10 @@ lib64/libmtklimiter.so
 lib64/libmtkperf_client.so
 lib64/libmtkshifter.so
 lib64/vendor.mediatek.hardware.videotelephony@1.0.so
+
+# AEE - from ossi SP1A.210812.016
+vendor/lib/libladder.so|e566b0a7c26c9fba19f637de069dadf0631de6f2
+vendor/lib64/libladder.so|892d3a6753db4bb44d5a662d0994e3b3c7ab267e
 
 # MTK-IMS-R - from KF6J RP1A.200720.011
 lib/libcomutils.so|077843d82d8689718d99542cee113cf2000f9243
