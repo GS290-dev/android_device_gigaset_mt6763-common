@@ -133,7 +133,6 @@ BOARD_SEPOLICY_DIRS += $(PLATFORM_PATH)/sepolicy/vendor
 # Android Verified Boot
 BOARD_AVB_ENABLE := true
 
-ifneq ($(strip $(TARGET_BUILD_VARIANT)), user)
 BOARD_CUSTOM_BOOTIMG := true
 BOARD_CUSTOM_BOOTIMG_MK := $(PLATFORM_PATH)/mkbootimg.mk
 
@@ -145,9 +144,6 @@ BOARD_AVB_RECOVERY_ROLLBACK_INDEX_LOCATION := 1
 BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --set_hashtree_disabled_flag
 BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --flags 2
 BOARD_PREBUILT_VBMETAIMAGE := $(PLATFORM_PATH)/prebuilt/vbmeta.img
-else
-MAIN_VBMETA_IN_BOOT := yes
-endif
 
 # Inherit from the proprietary version
 -include vendor/gigaset/mt6763-common/BoardConfigVendor.mk
