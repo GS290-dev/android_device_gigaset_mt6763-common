@@ -1,0 +1,1 @@
+allow radio mtk_default_prop:file read;

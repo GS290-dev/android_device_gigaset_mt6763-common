@@ -1,0 +1,1 @@
+allow thermal tel_switch_prop:file read;

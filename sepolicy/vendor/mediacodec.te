@@ -1,0 +1,1 @@
+allow mediacodec mtk_vdec_log_prop:file read;

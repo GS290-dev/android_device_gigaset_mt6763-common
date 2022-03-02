@@ -128,6 +128,7 @@ VENDOR_SECURITY_PATCH := 2021-12-05
 # SELinux
 include device/mediatek/sepolicy_vndr/SEPolicy.mk
 SYSTEM_EXT_PRIVATE_SEPOLICY_DIR += $(PLATFORM_PATH)/sepolicy/private
+SYSTEM_EXT_PUBLIC_SEPOLICY_DIR += $(PLATFORM_PATH)/sepolicy/public
 BOARD_SEPOLICY_DIRS += $(PLATFORM_PATH)/sepolicy/vendor
 
 # Android Verified Boot

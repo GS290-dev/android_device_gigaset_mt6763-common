@@ -1,0 +1,2 @@
+allow rild mtk_simswitch_emmode_prop:file read;
+allow rild radio_cdma_ecm_prop:file read;
