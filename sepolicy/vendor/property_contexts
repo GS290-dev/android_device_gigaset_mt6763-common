@@ -1,0 +1,3 @@
+persist.vendor.connsys.fm_chipid u:object_r:vendor_fm_prop:s0
+persist.vendor.connsys.fm_50khz_support u:object_r:vendor_fm_prop:s0
+persist.vendor.connsys.fm_short_antenna_support u:object_r:vendor_fm_prop:s0
