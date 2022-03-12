@@ -712,8 +712,6 @@ vendor/lib64/libwifitest.so
 # Power (Hardware)
 vendor/bin/hw/power_legacy_test_v_1_0
 vendor/bin/hw/power_native_test_v_1_0
-vendor/etc/powercontable.xml
-vendor/etc/powerscntbl.xml
 vendor/lib/hw/power.mt6763.so
 vendor/lib64/hw/power.mt6763.so
 
