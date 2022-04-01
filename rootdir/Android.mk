@@ -44,7 +44,11 @@ include $(CLEAR_VARS)
 LOCAL_MODULE       := fstab.mt6763
 LOCAL_MODULE_TAGS  := optional
 LOCAL_MODULE_CLASS := ETC
-LOCAL_SRC_FILES    := etc/fstab.mt6763
+ifeq ($(filter %_GS290 %_yggdrasil,$(TARGET_PRODUCT)),)
+LOCAL_SRC_FILES    := etc/fstab_fbe.mt6763
+else
+LOCAL_SRC_FILES    := etc/fstab_fde.mt6763
+endif
 LOCAL_MODULE_PATH  := $(TARGET_OUT_VENDOR_ETC)
 include $(BUILD_PREBUILT)
 
