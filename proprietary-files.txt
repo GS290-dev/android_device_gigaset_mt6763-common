@@ -28,10 +28,10 @@ lib64/vendor.mediatek.hardware.pq@2.1.so
 lib64/vendor.mediatek.hardware.pq@2.2.so
 lib64/vendor.mediatek.hardware.pq@2.3.so
 
-# Charger
-bin/kpoc_charger
+# Charger - from GS5 RP1A.200720.011
+bin/kpoc_charger|090ae15b917e593cb55a84f6d157d2dd4e12f89f
 etc/init/kpoc_charger.rc
-lib/libshowlogo.so
+lib/libshowlogo.so|715f83fdf23578dd643b942e13ee114285bc2ef9
 
 # MTK-IMS
 -framework/mediatek-common.jar
