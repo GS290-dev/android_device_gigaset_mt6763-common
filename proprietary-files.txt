@@ -38,14 +38,14 @@ lib/libshowlogo.so|715f83fdf23578dd643b942e13ee114285bc2ef9
 -framework/mediatek-framework.jar
 -framework/mediatek-ims-base.jar
 -framework/mediatek-ims-common.jar
+-framework/mediatek-ims-extension-plugin.jar
+-framework/mediatek-ims-legacy.jar
 -framework/mediatek-telecom-common.jar
 -framework/mediatek-telephony-base.jar
 -framework/mediatek-telephony-common.jar
 -priv-app/ImsService/ImsService.apk|12f3e6e7806c86ae34b44f7389ab3c194633fa01
 bin/vtservice
 etc/init/init.vtservice.rc
-framework/mediatek-ims-extension-plugin.jar
-framework/mediatek-ims-legacy.jar
 lib/libmtk_vt_service.so
 lib/libmtk_vt_wrapper.so
 lib/libmtkaudio_utils.so
