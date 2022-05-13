@@ -43,7 +43,7 @@ lib/libshowlogo.so|715f83fdf23578dd643b942e13ee114285bc2ef9
 -framework/mediatek-telecom-common.jar
 -framework/mediatek-telephony-base.jar
 -framework/mediatek-telephony-common.jar
--priv-app/ImsService/ImsService.apk|12f3e6e7806c86ae34b44f7389ab3c194633fa01
+-priv-app/ImsService/ImsService.apk|1bb78a0aac8de7ecbce5d0ee9432b3f701678601
 bin/vtservice
 etc/init/init.vtservice.rc
 lib/libmtk_vt_service.so
