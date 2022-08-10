@@ -781,7 +781,7 @@ vendor/lib/vendor.mediatek.hardware.pq@2.0.so
 vendor/lib/vendor.mediatek.hardware.pq@2.1.so
 vendor/lib/vendor.mediatek.hardware.pq@2.2.so
 vendor/lib/vendor.mediatek.hardware.pq@2.3.so
-vendor/lib64/libmtk-ril.so
+vendor/lib64/libmtk-ril.so|c839e772c5879a5174b440e80c6b8a5394cffc84
 vendor/etc/factory.ini
 vendor/etc/ecc_list.xml
 vendor/etc/ecc_list_OP01.xml
