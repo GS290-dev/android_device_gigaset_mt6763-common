@@ -35,6 +35,7 @@ PRODUCT_PACKAGES += \
     libaudiofoundation.vendor \
     libtinycompress \
     tinymix \
+    libtinyxml \
     android.hardware.audio@5.0.vendor \
     android.hardware.bluetooth.a2dp@1.0.vendor \
     android.hardware.broadcastradio@1.0.vendor \
