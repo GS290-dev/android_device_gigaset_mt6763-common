@@ -139,7 +139,7 @@ vendor/etc/init/audiocmdservice_atci.rc
 # Audio-Hardware (HIDL) - from KF6J RP1A.200720.011
 vendor/bin/hw/android.hardware.audio@5.0-service-mediatek|7d8173d321717056f1aad4ee5250cd23d0152780
 vendor/etc/init/android.hardware.audio@5.0-service-mediatek.rc|d2f25ca256ef25f6b98f38431d545fe671cf76b3
-vendor/lib/hw/android.hardware.audio@5.0-impl-mediatek.so|066d59c5ba973df968a4c8665a0c6e0f2355656b
+vendor/lib/hw/android.hardware.audio@5.0-impl-mediatek.so|53b3a0899a7a77d15bada842f1158c8c24f013ae
 vendor/lib/vendor.mediatek.hardware.audio@5.1.so|8bf798ce812ea43cfc3595d64c47cd2bac3415f8
 vendor/lib/libaudioprimarydevicehalifclient.so|5d51ea04be6da3066c5e1fffa546b6dd8ee4cc75
 vendor/lib64/hw/android.hardware.audio@5.0-impl-mediatek.so|cfb593dbc25eec99692a454ba0da43d519b415cb
