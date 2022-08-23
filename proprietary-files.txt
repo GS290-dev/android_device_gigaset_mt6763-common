@@ -152,8 +152,6 @@ vendor/bin/aee_aedv|0939311498b2c3a7762f4ba7b1388eb082488e0e
 vendor/bin/aee_aedv64|867e542722fa804eccd5ab984de882c5abd71563
 vendor/bin/aee_dumpstatev|edc3d114292985547a8650d826ebc80f2ffaf842
 vendor/etc/aee-config|0253ad6dd8148a58f65dbea3b2cfe827448cf6d5
-vendor/etc/init/aee_aedv.rc|583f368556b910222456e60ece22a5e212351bfb
-vendor/etc/init/aee_aedv64.rc|2e92b573babf526b310364d5f1c3110c42681385
 vendor/lib/libladder.so|029d0a8392c8bb526448be8a4e188ecc6994c067
 vendor/lib/libaedv.so|6ca87e36505989bbede14731512283eb8eb14478
 vendor/lib64/libladder.so|2d83f0a98be3e6bd068c15e7f649836d794fae4b
