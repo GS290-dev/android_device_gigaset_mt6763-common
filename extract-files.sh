@@ -42,6 +42,9 @@ function blob_fixup() {
         lib/libmtk_vt_service.so)
             "${PATCHELF}" --add-needed "libshim_vtservice.so" "${2}"
             ;;
+        lib/libshowlogo.so)
+            "${PATCHELF}" --add-needed "libshim_showlogo.so" "${2}"
+            ;;
     esac
 }
 
