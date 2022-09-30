@@ -1,0 +1,2 @@
+# label for charge disabler
+genfscon sysfs /devices/platform/charger/cmd_charge_disable        u:object_r:cmd_charge_disable:s0

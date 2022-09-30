@@ -1,0 +1,1 @@
+allow system_server cmd_charge_disable:file rw_file_perms;
