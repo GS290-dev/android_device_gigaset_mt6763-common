@@ -130,3 +130,6 @@
 
 #MTK In-House TEE
 /dev/ttyACM0              0660   radio      radio
+
+# SDCard partitions permission
+/dev/block/mmcblk1*                 0660    root    system
