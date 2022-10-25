@@ -1,1 +1,0 @@
-allow mtk_hal_camera vendor_debug_prop:property_service set;
