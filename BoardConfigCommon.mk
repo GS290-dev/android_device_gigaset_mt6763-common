@@ -95,6 +95,9 @@ TARGET_USERIMAGES_USE_EXT4 := true
 DEVICE_MATRIX_FILE := $(PLATFORM_PATH)/compatibility_matrix.xml
 DEVICE_MANIFEST_FILE := $(PLATFORM_PATH)/manifest.xml
 
+# Media
+TARGET_USES_MTK_CODECS := true
+
 # Network Routing
 TARGET_IGNORES_FTP_PPTP_CONNTRACK_FAILURE := true
 
