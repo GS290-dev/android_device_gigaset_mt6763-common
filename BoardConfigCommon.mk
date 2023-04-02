@@ -134,6 +134,7 @@ ENABLE_VENDOR_RIL_SERVICE := true
 VENDOR_SECURITY_PATCH := 2021-12-05
 
 # SELinux
+TARGET_USING_LEGACY_SELINUX := true
 include device/mediatek/sepolicy_vndr/SEPolicy.mk
 SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(PLATFORM_PATH)/sepolicy/private
 BOARD_SEPOLICY_DIRS += $(PLATFORM_PATH)/sepolicy/vendor
