@@ -130,9 +130,7 @@ vendor/bin/gsm0710muxd
 vendor/etc/init/gsm0710muxd.rc
 vendor/lib/libccci_util.so
 vendor/lib/hw/audio.r_submix.mt6763.so
-vendor/lib/hw/audio.usb.mt6763.so
 vendor/lib64/hw/audio.r_submix.mt6763.so
-vendor/lib64/hw/audio.usb.mt6763.so
 vendor/bin/audiocmdservice_atci
 vendor/etc/init/audiocmdservice_atci.rc
 
