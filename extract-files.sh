@@ -45,6 +45,9 @@ function blob_fixup() {
         lib/libshowlogo.so)
             "${PATCHELF}" --add-needed "libshim_showlogo.so" "${2}"
             ;;
+        vendor/etc/agps_profiles_conf2.xml)
+            sed -i 's|imsi_enable="true"|imsi_enable="false"|' "${2}"
+            ;;
     esac
 }
 
